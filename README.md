@@ -1,10 +1,20 @@
 # MadeByShape x Shopify
 
-## NPM Commands
+This is a Shopify starter [MadeByShape](https://madebyshape.co.uk) use internally for projects. It is intended to be used on top of an existing Shopify theme, allowing you to setup custom CSS and JS. 
+
+## The Stack
+
+- [Webpack 5.x](https://webpack.js.org/) 
+- [Tailwind CSS 3.x](https://tailwindcss.com)
+- [Alpine.js 3.x](https://alpinejs.dev/)
+- [Shopify CLI](https://shopify.dev/docs/themes/tools/cli/install)
+
+## Requirements
 
 Before running any commands first install node (v20.11.1) and [shopify cli](https://shopify.dev/docs/themes/tools/cli/install) globally on your computer.
 
-You can then run the following commands.
+
+## NPM Commands
 
 ```
 npm run dev
@@ -19,7 +29,7 @@ npm run shopify-list
 This will show a list of all themes for the current shopify site you are working on.
 
 ```
-npm run shop-ify-pull-dev
+npm run shopify-pull-dev
 ```
 
 This will pull any CMS changes from you local dev environment into the repo.
