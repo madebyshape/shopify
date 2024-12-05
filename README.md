@@ -13,6 +13,23 @@ This is a Shopify starter [MadeByShape](https://madebyshape.co.uk) use internall
 
 Before running any commands first install node (v20.11.1) and [shopify cli](https://shopify.dev/docs/themes/tools/cli/install) globally on your computer.
 
+## Setup
+
+### 1. Theme Files
+
+Create a new repo for your project and add your theme files into the repo. Then copy the contents of this repo into your new project repo as well. Be sure to 
+
+### 2. Shopify Store ID
+
+Update the following lines in `package.json` with your Shopify store ID e.g. `xxxxxx-xx`.
+```
+"shopify-dev": "shopify theme dev --store=xxxxxx-xx",
+"shopify-list": "shopify theme list --store=xxxxxx-xx",
+"shopify-pull-dev": "shopify theme pull -d -n --store=xxxxxx-xx",
+```
+
+### 2. Theme files
+
 
 ## NPM Commands
 
