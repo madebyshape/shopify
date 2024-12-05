@@ -35,8 +35,14 @@ npm install
 
 ### 4. Link with theme files
 This step when vary per theme, but typically, you will need to add the following lines to your `layout/theme.liquid` file:
+
+Add your `custom.css` stylesheet link within the `<head>` tags.
 ```
 <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
+```
+
+Add your `custom.js` script tag at the bottom of the `<body>` tag.
+```
 <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
 ```
 
