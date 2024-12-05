@@ -1,6 +1,6 @@
 # MadeByShape x Shopify
 
-This is a Shopify starter [MadeByShape](https://madebyshape.co.uk) use internally for projects. It is intended to be used on top of an existing Shopify theme, allowing you to setup custom CSS and JS. 
+This is a Shopify starter [MadeByShape](https://madebyshape.co.uk) use internally for projects. It is intended to be used on top of an existing Shopify theme. 
 
 ## The Stack
 
@@ -58,3 +58,9 @@ Once you've completed these steps, you should be ready to start working on your 
 | `npm run shopify-pull-dev` | Pulls any CMS changes from you local dev environment into the repository. |
 | `npm run dev` | Starts Webpack + TailwindCSS development. |
 | `npm run build` | Runs Webpage + TailwindCSS production build. |
+
+## Additional Notes
+
+### TailwindCSS
+
+By default, the TailwindCSS config is set to prefix all classes with `tw-`. This is to prevent any issues with the themes existing CSS classes. 
