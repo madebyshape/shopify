@@ -45,6 +45,9 @@ Add your `custom.js` script tag at the bottom of the `<body>` tag.
 ```
 <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
 ```
+### 5. Good to go 🚀
+
+Once you've completed these steps, you should be ready to start working on your theme! 
 
 ## CLI commands
 
