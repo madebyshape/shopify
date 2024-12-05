@@ -15,11 +15,11 @@ Before running any commands first install node (v20.11.1) and [shopify cli](http
 
 ## Setup
 
-### 1. Theme Files
+### 1. Theme files
 
 Create a new repository for your new Shopify project and add your theme files into it. Download a copy of this repository to your computer using the Code button above. Then move these files into your new project repository.
 
-### 2. Shopify Store ID
+### 2. Shopify store ID
 
 Update the following lines in `package.json` with your Shopify store ID e.g. `xxxxxx-xx`.
 ```
@@ -27,10 +27,17 @@ Update the following lines in `package.json` with your Shopify store ID e.g. `xx
 "shopify-list": "shopify theme list --store=xxxxxx-xx",
 "shopify-pull-dev": "shopify theme pull -d -n --store=xxxxxx-xx",
 ```
-### 3. Install Dependencies
+### 3. Install dependencies
 
 ```
 npm install
+```
+
+### 4. Link with theme files
+This step when vary per theme, but typically, you will need to add the following lines to your `layout/theme.liquid` file:
+```
+<link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
+<script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
 ```
 
 ## CLI commands
