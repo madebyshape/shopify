@@ -27,7 +27,7 @@ Update the following lines in `package.json` with your Shopify store ID e.g. `xx
 "shopify-list": "shopify theme list --store=xxxxxx-xx",
 "shopify-pull-dev": "shopify theme pull -d -n --store=xxxxxx-xx",
 ```
-### 3. Install
+### 3. Install Dependencies
 
 ```
 npm install
