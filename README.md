@@ -33,22 +33,12 @@ Update the following lines in `package.json` with your Shopify store ID e.g. `xx
 npm install
 ```
 
-## NPM Commands
+## CLI commands
 
-```
-npm run dev
-```
-
-This will run the dev site locally, creating a new dev theme if one has not already been created. Dev themes are created automatically by shopify and are machine specific, so if multiple devs are working on the site they will have their own dev themes.
-
-```
-npm run shopify-list
-```
-
-This will show a list of all themes for the current shopify site you are working on.
-
-```
-npm run shopify-pull-dev
-```
-
-This will pull any CMS changes from you local dev environment into the repo.
+| Command | Description |
+| -------- | ------- |
+| `npm run shopify-dev` | Runs the Shopify site locally, creating a new dev theme. |
+| `npm run shopify-list` | Shows a list of all themes for the current shopify site you are working on. |
+| `npm run shopify-pull-dev` | Pulls any CMS changes from you local dev environment into the repository. |
+| `npm run dev` | Starts Webpack + TailwindCSS development. |
+| `npm run build` | Runs Webpage + TailwindCSS production build. |
