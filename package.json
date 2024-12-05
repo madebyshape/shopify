@@ -1,0 +1,25 @@
+{
+    "name": "madebyshape-shopify",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "shopify-dev": "shopify theme dev --store=h0a94t-50",
+        "shopify-list": "shopify theme list --store=h0a94t-50",
+        "shopify-pull-dev": "shopify theme pull -d -n --store=h0a94t-50",
+        "tailwind-dev": "npx tailwindcss -i assets/index.css -o assets/custom.css --watch",
+        "webpack-dev": "npx webpack --watch",
+        "dev": "npm run tailwind-dev & npm run webpack-dev"
+    },
+    "author": "Tom Pickering (@iamtompickering)",
+    "authorUrl": "https://madebyshape.co.uk",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/madebyshape/shopify/issues"
+    },
+    "homepage": "https://github.com/madebyshape/shopify#readme",
+    "devDependencies": {
+        "tailwindcss": "^3.4.16"
+    }
+}
