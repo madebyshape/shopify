@@ -71,7 +71,7 @@ Some Shopify theme files come with `custom.css` and `custom.js` included out the
 
 You can either overrite these files if that is possible, OR you can update the naming of them in your setup. This would require you updating the `watch:tailwind` script in `package.json` and also the filename in `webpack.config.js`.
 
-## Shopify Plugins we ❤️
+### Shopify Plugins we ❤️
 
 | Name | Description |
 | -------- | ------- |
