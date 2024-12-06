@@ -15,9 +15,9 @@ Before running any commands first install node (v20.11.1) and [shopify cli](http
 
 ## Setup
 
-### 1. Theme files
+### 1. Setup Theme
 
-Create a new repository for your new Shopify project and add your theme files into it. Download a copy of this repository to your computer using the Code button above. Then move these files into your new project repository.
+Create a new repository for your new Shopify project and add your theme files into it. Download a copy of this repository to your computer using the Code button above. Then move these files into your new project repository. Finally, login to your Shopify store and go to Online Store > Themes. From here, connect your new repository as a new theme. 
 
 ### 2. Shopify store ID
 
