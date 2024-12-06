@@ -86,7 +86,7 @@ You can either overrite these files if that is possible, OR you can update the n
 | [Flow](https://apps.shopify.com/flow) | Customize your store and automate your tasks using Shopify Flow’s low-code editor. |
 | [Free Shipping Upsell](https://apps.shopify.com/essential-order-value-booster) | Increase Profits, AOV & Sales With A Free Shipping Progress Bar Cart Goal and Cart Upsell. |
 | [Klaviyo](https://apps.shopify.com/klaviyo-email-marketing) | Grow faster and more efficiently with email, sms, reviews and more. Powered by your customer data. |
-| [Automatic Discounts](https://apps.shopify.com/regios-automatic-discounts) | Description |
+| [Automatic Discounts](https://apps.shopify.com/regios-automatic-discounts) | Seamlessly Create Custom Automatic Product, Order, and Shipping Discounts for VIP Customers. |
 | [BON Loyalty](https://apps.shopify.com/bon-loyalty-rewards) | A unified, intuitive and powerful loyalty program with rewards & referrals to boost repeat purchases. |
 | [Sami Wholesale](https://apps.shopify.com/wholesale-sami) | A super comprehensive solution to customize and manage wholesale pricing on your store. |
 
