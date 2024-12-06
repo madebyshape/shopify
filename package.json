@@ -21,6 +21,7 @@
     "homepage": "https://github.com/madebyshape/shopify#readme",
     "devDependencies": {
         "alpinejs": "^3.14.6",
+        "autoprefixer": "^10.4.20",
         "concurrently": "^9.1.0",
         "postcss": "^8.4.49",
         "postcss-cli": "^11.0.0",
