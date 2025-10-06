@@ -4,10 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "shopify-dev": "shopify theme dev --store=xxxxxx-xx",
-    "shopify-list": "shopify theme list --store=xxxxxx-xx",
-    "shopify-pull-dev": "shopify theme pull -d -n --store=xxxxxx-xx",
-    "build": "webpack --mode production",
+    "shopify": "shopify theme dev --store=xxxxxx-xx",
+    "shopify-pull": "shopify theme pull -d -n --store=xxxxxx-xx",
     "watch:webpack": "webpack --watch --mode development",
     "watch:tailwind": "npx @tailwindcss/cli -i ./src/index.css -o ./assets/custom.css --watch",
     "dev": "concurrently \"npm run watch:webpack\" \"npm run watch:tailwind\""
