@@ -58,9 +58,8 @@ Once you've completed these steps, you should be ready to start working on your 
 
 | Command | Description |
 | -------- | ------- |
-| `npm run shopify-dev` | Runs the Shopify site locally, creating a new dev theme. |
-| `npm run shopify-list` | Shows a list of all themes for the current shopify site you are working on. |
-| `npm run shopify-pull-dev` | Pulls any CMS changes from you local dev environment into the repository. |
+| `npm run shopify` | Runs the Shopify site locally, creating a new dev theme. |
+| `npm run shopify-pull` | Pulls any CMS changes from you local dev environment into the repository. |
 | `npm run dev` | Starts Webpack + TailwindCSS development. |
 | `npm run build` | Runs Webpage + TailwindCSS production build. |
 
