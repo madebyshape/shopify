@@ -28,9 +28,8 @@ Before running any commands first install node (v20.11.1) and [shopify cli](http
 
 Update the following lines in `package.json` with your Shopify store ID e.g. `xxxxxx-xx`.
 ```
-"shopify-dev": "shopify theme dev --store=xxxxxx-xx",
-"shopify-list": "shopify theme list --store=xxxxxx-xx",
-"shopify-pull-dev": "shopify theme pull -d -n --store=xxxxxx-xx",
+"shopify": "shopify theme dev --store=xxxxxx-xx",
+"shopify-pull": "shopify theme pull -d -n --store=xxxxxx-xx",
 ```
 ### 3. Install dependencies
 
