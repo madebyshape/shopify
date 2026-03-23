@@ -1,0 +1,2 @@
+document.addEventListener(`alpine:init`,()=>{Alpine.data(`productForm`,()=>({quantity:1,increment(){this.quantity++},decrement(){this.quantity>1&&this.quantity--}}))});
+//# sourceMappingURL=custom-product.js.map

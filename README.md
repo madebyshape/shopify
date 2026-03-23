@@ -13,6 +13,8 @@ This is a Shopify starter [MadeByShape](https://madebyshape.co.uk) use internall
 
 Before running any commands first install node (v20+) and [shopify cli](https://shopify.dev/docs/themes/tools/cli/install) globally on your computer.
 
+If you use [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm), run `nvm use` / `fnm use` in the project root to automatically switch to the correct Node version (pinned in `.nvmrc`).
+
 ## Setup
 
 ### 1. Setup Theme
@@ -26,11 +28,16 @@ Before running any commands first install node (v20+) and [shopify cli](https://
 
 ### 2. Shopify store ID
 
-Update the following lines in `package.json` with your Shopify store ID e.g. `xxxxxx-xx`.
+Copy `.env.example` to `.env` and update it with your Shopify store ID.
 ```
-"shopify": "shopify theme dev --store=xxxxxx-xx",
-"shopify-pull": "shopify theme pull -d -n --store=xxxxxx-xx",
+cp .env.example .env
 ```
+```
+SHOPIFY_STORE=xxxxxx-xx
+```
+
+The `.env` file is gitignored so each developer can have their own store ID without it being committed.
+
 ### 3. Install dependencies
 
 ```
@@ -38,6 +45,7 @@ npm install
 ```
 
 ### 4. Link with theme files
+
 This step will vary per theme, but typically you will need to add the following lines to your `layout/theme.liquid` file:
 
 Add your `custom.css` stylesheet link within the `<head>` tags.
@@ -49,6 +57,7 @@ Add your `custom.js` script tag at the bottom of the `<body>` tag.
 ```
 <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
 ```
+
 ### 5. Good to go 🚀
 
 Once you've completed these steps, you should be ready to start working on your theme!
@@ -57,16 +66,34 @@ Once you've completed these steps, you should be ready to start working on your 
 
 | Command | Description |
 | -------- | ------- |
-| `npm run shopify` | Runs the Shopify site locally, creating a new dev theme. |
-| `npm run shopify-pull` | Pulls any CMS changes from your local dev environment into the repository. |
-| `npm run dev` | Starts Vite in watch mode — rebuilds `assets/custom.js` and `assets/custom.css` on every change. Run this alongside `npm run shopify` in a separate terminal. |
+| `npm run dev` | Starts Shopify theme dev **and** Vite watch mode together in one terminal. |
 | `npm run build` | One-off production build of `assets/custom.js` and `assets/custom.css`. |
+| `npm run shopify` | Runs the Shopify site locally only (without the asset watcher). |
+| `npm run shopify-pull` | Pulls any CMS changes from your local dev environment into the repository. |
+| `npm run theme-check` | Runs Shopify's Liquid linter against your theme files. |
 
 ## Additional Notes
 
 ### TailwindCSS
 
 By default, the TailwindCSS config is set to prefix all classes with `tw-`. This is to prevent any issues with the theme's existing CSS classes.
+
+### Page-specific JS bundles
+
+For JS that only needs to load on certain page types, add a file to `src/pages/`. Vite automatically picks up any `.js` file in that directory and outputs it as `assets/custom-[name].js`.
+
+For example, `src/pages/product.js` becomes `assets/custom-product.js`. Load it conditionally in `layout/theme.liquid`:
+```liquid
+{% if template == 'product' %}
+  <script src="{{ 'custom-product.js' | asset_url }}" defer></script>
+{% endif %}
+```
+
+An example `src/pages/product.js` is included to get you started.
+
+### Source maps
+
+Source maps are enabled automatically when running in watch/development mode (`npm run dev`), so browser DevTools will point at your original `src/` files. They are disabled in production builds (`npm run build`).
 
 ### Dist filenames
 
