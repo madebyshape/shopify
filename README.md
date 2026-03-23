@@ -104,20 +104,3 @@ You can either overwrite these files if that is possible, OR you can update the 
 ### Vite config
 
 Vite is configured to output directly into the `assets/` folder without clearing it first (`emptyOutDir: false`), so existing Shopify theme asset files are never deleted. CSS and JS are both compiled from `src/` in a single Vite pass.
-
-## Shopify Plugins we ❤️
-
-- [Accounts](https://apps.shopify.com/customer-accounts)
-- [Wishlist](https://apps.shopify.com/wishlist-king)
-- [Product Filtering](https://apps.shopify.com/search-and-discovery)
-- [Imports / Exports](https://apps.shopify.com/excel-export-import)
-- [Memberships](https://apps.shopify.com/membership-program)
-- [Custom Email Templates](https://apps.shopify.com/email-templates)
-- [Translations](https://apps.shopify.com/translate-and-adapt)
-- [Google Shopping Feed](https://apps.shopify.com/google-shopping-feed)
-- [Custom Flows](https://apps.shopify.com/flow)
-- [Free Shipping Upsell](https://apps.shopify.com/essential-order-value-booster)
-- [Klaviyo](https://apps.shopify.com/klaviyo-email-marketing)
-- [Automatic Discounts](https://apps.shopify.com/regios-automatic-discounts)
-- [Loyalty / Rewards](https://apps.shopify.com/bon-loyalty-rewards)
-- [Wholesale](https://apps.shopify.com/wholesale-sami)
