@@ -4,14 +4,14 @@ This is a Shopify starter [MadeByShape](https://madebyshape.co.uk) use internall
 
 ## The Stack
 
-- [Webpack 5.x](https://webpack.js.org/)
+- [Vite 8.x](https://vitejs.dev/)
 - [Tailwind CSS 4.x](https://tailwindcss.com)
 - [Alpine.js 3.x](https://alpinejs.dev/)
 - [Shopify CLI](https://shopify.dev/docs/themes/tools/cli/install)
 
 ## Requirements
 
-Before running any commands first install node (v20.11.1) and [shopify cli](https://shopify.dev/docs/themes/tools/cli/install) globally on your computer.
+Before running any commands first install node (v20+) and [shopify cli](https://shopify.dev/docs/themes/tools/cli/install) globally on your computer.
 
 ## Setup
 
@@ -38,7 +38,7 @@ npm install
 ```
 
 ### 4. Link with theme files
-This step when vary per theme, but typically, you will need to add the following lines to your `layout/theme.liquid` file:
+This step will vary per theme, but typically you will need to add the following lines to your `layout/theme.liquid` file:
 
 Add your `custom.css` stylesheet link within the `<head>` tags.
 ```
@@ -58,20 +58,25 @@ Once you've completed these steps, you should be ready to start working on your 
 | Command | Description |
 | -------- | ------- |
 | `npm run shopify` | Runs the Shopify site locally, creating a new dev theme. |
-| `npm run shopify-pull` | Pulls any CMS changes from you local dev environment into the repository. |
-| `npm run dev` | Starts Webpack + TailwindCSS development. |
+| `npm run shopify-pull` | Pulls any CMS changes from your local dev environment into the repository. |
+| `npm run dev` | Starts Vite in watch mode — rebuilds `assets/custom.js` and `assets/custom.css` on every change. Run this alongside `npm run shopify` in a separate terminal. |
+| `npm run build` | One-off production build of `assets/custom.js` and `assets/custom.css`. |
 
 ## Additional Notes
 
 ### TailwindCSS
 
-By default, the TailwindCSS config is set to prefix all classes with `tw-`. This is to prevent any issues with the themes existing CSS classes.
+By default, the TailwindCSS config is set to prefix all classes with `tw-`. This is to prevent any issues with the theme's existing CSS classes.
 
 ### Dist filenames
 
 Some Shopify theme files come with `custom.css` and `custom.js` included out the box, so be sure to check this.
 
-You can either overrite these files if that is possible, OR you can update the naming of them in your setup. This would require you updating the `watch:tailwind` script in `package.json` and also the filename in `webpack.config.js`.
+You can either overwrite these files if that is possible, OR you can update the naming of them in your setup. To rename the outputs, update the `entryFileNames` and `assetFileNames` values in `vite.config.js`.
+
+### Vite config
+
+Vite is configured to output directly into the `assets/` folder without clearing it first (`emptyOutDir: false`), so existing Shopify theme asset files are never deleted. CSS and JS are both compiled from `src/` in a single Vite pass.
 
 ## Shopify Plugins we ❤️
 
@@ -89,4 +94,3 @@ You can either overrite these files if that is possible, OR you can update the n
 - [Automatic Discounts](https://apps.shopify.com/regios-automatic-discounts)
 - [Loyalty / Rewards](https://apps.shopify.com/bon-loyalty-rewards)
 - [Wholesale](https://apps.shopify.com/wholesale-sami)
-

@@ -1,3 +1,6 @@
+// Import CSS
+import './index.css'
+
 // Import JS
 import Alpine from 'alpinejs'
  
