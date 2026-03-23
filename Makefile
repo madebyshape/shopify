@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 
 .PHONY: setup
-setup:
+setup: ## First-time project setup: copy .env, install dependencies
 	@if [ ! -f .env ]; then \
 		cp .env.example .env; \
 		echo "✔  Created .env from .env.example — add your SHOPIFY_STORE value"; \
@@ -13,27 +13,27 @@ setup:
 	@echo "✔  Setup complete. Run 'make dev' to start developing."
 
 .PHONY: dev
-dev:
+dev: ## Start Shopify theme dev + Vite watch (requires .env)
 	npm run dev
 
 .PHONY: build
-build:
+build: ## Production build (outputs to assets/)
 	npm run build
 
 .PHONY: shopify
-shopify:
+shopify: ## Start Shopify theme dev only (no asset watcher)
 	npm run shopify
 
 .PHONY: pull
-pull:
+pull: ## Pull CMS changes from your Shopify dev theme
 	npm run shopify-pull
 
 .PHONY: check
-check:
+check: ## Run Shopify Liquid theme check
 	npm run theme-check
 
 .PHONY: help
-help:
+help: ## Show available commands
 	@echo ""
 	@echo "  MadeByShape x Shopify"
 	@echo ""
