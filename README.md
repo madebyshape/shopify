@@ -40,6 +40,12 @@ The `.env` file is gitignored so each developer can have their own store ID with
 
 ### 3. Install dependencies
 
+Run the setup command to install dependencies and copy `.env.example` to `.env` in one step:
+```
+make setup
+```
+
+Or manually:
 ```
 npm install
 ```
@@ -64,13 +70,16 @@ Once you've completed these steps, you should be ready to start working on your 
 
 ## CLI commands
 
-| Command | Description |
-| -------- | ------- |
-| `npm run dev` | Starts Shopify theme dev **and** Vite watch mode together in one terminal. |
-| `npm run build` | One-off production build of `assets/custom.js` and `assets/custom.css`. |
-| `npm run shopify` | Runs the Shopify site locally only (without the asset watcher). |
-| `npm run shopify-pull` | Pulls any CMS changes from your local dev environment into the repository. |
-| `npm run theme-check` | Runs Shopify's Liquid linter against your theme files. |
+Commands are available as both `make` shortcuts and `npm run` equivalents.
+
+| Make | npm | Description |
+| ---- | --- | ------- |
+| `make setup` | — | First-time setup: copies `.env.example` → `.env` and runs `npm install`. |
+| `make dev` | `npm run dev` | Starts Shopify theme dev **and** Vite watch mode together in one terminal. |
+| `make build` | `npm run build` | One-off production build of `assets/custom.js` and `assets/custom.css`. |
+| `make shopify` | `npm run shopify` | Runs the Shopify site locally only (without the asset watcher). |
+| `make pull` | `npm run shopify-pull` | Pulls any CMS changes from your local dev environment into the repository. |
+| `make check` | `npm run theme-check` | Runs Shopify's Liquid linter against your theme files. |
 
 ## Additional Notes
 
